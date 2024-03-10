@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     compContent: {
         paddingTop: 70,
         alignSelf: "center",
-        fontFamily: "TrebuchetMS-Italic",
+        fontFamily: "normal",
         fontWeight: "bold",
         fontSize: 20,
         color: "#000000"
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         paddingTop: 30,
         paddingBottom: 80,
         alignSelf: "center",
-        fontFamily: "TrebuchetMS-Italic",
+        fontFamily: "normal",
         fontWeight: "bold",
         fontSize: 30,
         color: "#000000"
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         paddingTop: 30,
         paddingBottom: 5,
         alignSelf: "center",
-        fontFamily: "TrebuchetMS-Italic",
+        fontFamily: "normal",
         fontSize: 20,
         color: "#000000",
         opacity: 0.2
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingVertical: 7,
         borderRadius: 20,
-        fontFamily: "SinhalaSangamMN-Bold",
+        fontFamily: "normal",
         width: "100%",
         height: 50,
         fontSize: 20
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     },
     buttonLabel: {
         alignSelf: "center",
-        fontFamily: "TrebuchetMS-Italic",
+        fontFamily: "normal",
         fontSize: 20,
     },
     newHereContainer: {
