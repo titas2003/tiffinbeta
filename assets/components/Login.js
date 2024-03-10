@@ -1,12 +1,15 @@
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native'
 import Checkbox from 'expo-checkbox';
 import React, { useState } from 'react'
+import * as Google from 'expo-auth-session/providers/google';
 
 const Login = ({navigation}) => {
     const handleLogin = () => {
         navigation.navigate('Home');
     };
-    
+    const handleRegister = () => {
+        navigation.navigate('Register');
+    }
     const [agree, setAgree] = useState(false);
   return (
     <View style={styles.mainContainer}>
@@ -34,6 +37,7 @@ const Login = ({navigation}) => {
             />
             <Text style={styles.wrapperText}>Remember me</Text>
         </View>
+        <View  style={styles.actionArea}>
         <TouchableOpacity style={[styles.buttonStyle,{
             backgroundColor: agree ? "#7CB342" : "#FFAB91"
         }]}
@@ -42,7 +46,12 @@ const Login = ({navigation}) => {
         >
             <Text style={styles.buttonLabel} >LOGIN</Text>
         </TouchableOpacity>
-        
+        <TouchableOpacity style={styles.newHereContainer}
+            onPress={handleRegister}
+        >
+            <Text style={styles.newHere}>New Here? </Text>
+        </TouchableOpacity>
+        </View>
     </View>
 
   )
@@ -120,11 +129,24 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5,
+        display: 'inline'
     },
     buttonLabel: {
         alignSelf: "center",
         fontFamily: "TrebuchetMS-Italic",
         fontSize: 20,
+    },
+    newHereContainer: {
+        paddingHorizontal: 15,
+        paddingTop: 10,
+        display: 'inline',
+    },
+    newHere: {
+        fontSize: 20,
+        opacity: 0.6,
+    },
+    actionArea: {
+        flexDirection: 'row'
     }
 })
 
